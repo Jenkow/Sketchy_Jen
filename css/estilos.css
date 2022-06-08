@@ -51,7 +51,7 @@ header{
     text-decoration: none;
 }   
 
-.titulo{               /*Sketchy Jen de index*/
+.tituloIndex{               /*Sketchy Jen de index*/
 
     font-family: 'Aclonica', sans-serif;
     color: black;
@@ -94,7 +94,7 @@ header{
     grid-template-areas: "skate" "longboard" "rollers" "surf" "nosotros";
     gap: 20px;
     padding: 20px 10px;
-    width: 100vw;
+    width: 100%;
     max-width: 1800px;
     justify-self: center;
 }
@@ -166,12 +166,21 @@ footer{
 
 /*--------------------------- DISPLAY PRODUCTOS -------------------------------*/
 
+.titulo{               /*Sketchy Jen de index*/
+
+    font-family: 'Aclonica', sans-serif;
+    color: black;
+    font-size: 225%;
+    -webkit-text-stroke: 0.5px rgba(245, 165, 209);
+    margin-top: 10rem;
+    transform: translate(0px,-100px);
+}
+
 .containerProductos{      /*grilla productos exhibidos*/
     margin: 20px;
     display: grid;
     gap: 20px;
     grid-template-rows: repeat(4, 1fr);
-    grid-template-columns: repeat(2,1fr);
     overflow: auto;
 }
 
@@ -179,7 +188,19 @@ footer{
     justify-self: center;
 }
 
+/*--------------------------------- EFECTOS -------------------------------*/
+
+
+
 /*--------------------------------- RESPONSIVE -------------------------------*/
+
+@media screen and (min-width: 426px) {
+    
+    .containerProductos{      /*grilla productos exhibidos*/
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
 
 @media screen and (max-width: 780px) {
     
@@ -194,6 +215,7 @@ footer{
 
     
 }
+
 
 @media screen and (min-width: 780px){
 
@@ -213,12 +235,18 @@ footer{
     .containerNav{      
         grid-template-columns:repeat(2,1fr);       /*modifico estructura del nav grande del index*/
         padding: 50px;
+        width: 100%;
     }
 
     .categoriasIndex{       /*cajas de acceso de index*/
         font-size: 0;
         background-position: center;
         background-size: cover;
+        transition: 0.3s;
+    }
+
+    .categoriasIndex:hover{
+        transform: scale(110%);
     }
 
     /*----------------SKATE DESKTOP----------*/
@@ -231,6 +259,14 @@ footer{
 
     #skateHero{
         justify-content: flex-start;
+    }
+
+    .cajaItem{          /*caja de UN producto*/
+        transition: 0.3s;
+    }
+
+    .cajaItem:hover{
+        transform: scale(105%);
     }
 }
 
