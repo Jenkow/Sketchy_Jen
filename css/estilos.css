@@ -8,11 +8,22 @@
 
 /*--------------------------- . -------------------------------*/
 
-#indexBody{
-    background-color: rgb(29, 27, 27);
+
+body{                   /*grid general*/
+    display: grid;
+    grid-template-rows: 85px 90vh 700px 45px;
+    grid-template-areas: "header"
+                         "hero"
+                         "productos"
+                         "footer";
+}
+
+#indexBody{              /*body con background negro para el index*/
+    background-color: black;
 }
 
 header{
+    grid-area: header;  
     display: flex;
     flex-direction: row;
     background-color:rgba(245, 165, 209, 0.945);
@@ -20,16 +31,21 @@ header{
     align-items: center;
 }
 
+.logo{              /*logo header*/
+    display: flex;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background-image: url("../assets/sjlogo.jpg");
+    background-position: center;
+    background-size: contain;
+}
+
 .nav-custom{
     width: 75%;
     font-family: 'Koulen', cursive;
     font-size: 150%;
     
-}
-
-.logo{              /*logo header*/
-    border-radius: 55%;
-    height: 100px;
 }
 
 .tituloIndex{               /*Sketchy Jen de index*/
@@ -42,7 +58,7 @@ header{
 }
 
 .hero{              /*estructura general de la Hero Section*/
-    height: 1300px;
+    grid-area: hero;
     background-position: center;
     background-size: cover;
     display: flex;
@@ -52,28 +68,6 @@ header{
     color: white;
     -webkit-text-stroke: 1.5px black;
     text-decoration: none;
-}
-
-
-
-.mini-hero{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url("../assets/backgroundProducts.jpg");
-    color: white;
-    min-height: 150px;
-}
-
-h2{
-    font-family: 'Koulen', cursive;
-}
-
-
-.carousel-custom{
-    max-width: 1400px;
-    justify-content: center;
-    margin-top: 5px;
 }
 
 #indexHero{
@@ -266,4 +260,5 @@ footer{
         transform: scale(105%);
     }
 }
+
 
