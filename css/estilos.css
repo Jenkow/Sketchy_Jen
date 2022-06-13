@@ -8,22 +8,11 @@
 
 /*--------------------------- . -------------------------------*/
 
-
-body{                   /*grid general*/
-    display: grid;
-    grid-template-rows: 85px 90vh 700px 45px;
-    grid-template-areas: "header"
-                         "hero"
-                         "productos"
-                         "footer";
-}
-
 #indexBody{              /*body con background negro para el index*/
     background-color: black;
 }
 
 header{
-    grid-area: header;  
     display: flex;
     flex-direction: row;
     background-color:rgba(245, 165, 209, 0.945);
@@ -41,7 +30,7 @@ header{
     background-size: contain;
 }
 
-.nav-custom{
+.nav-custom{   /*agrego propiedades al nav de Bootstrap*/
     width: 75%;
     font-family: 'Koulen', cursive;
     font-size: 150%;
@@ -52,13 +41,13 @@ header{
 
     font-family: 'Aclonica', sans-serif;
     color: black;
-    font-size: 225%;
+    font-size: 200%;
     -webkit-text-stroke: 0.5px rgba(245, 165, 209);
     margin-top: 10rem;
 }
 
 .hero{              /*estructura general de la Hero Section*/
-    grid-area: hero;
+    height: 800px;
     background-position: center;
     background-size: cover;
     display: flex;
@@ -78,12 +67,27 @@ header{
 #skateHero{
     background-image: url(../assets/skates/skatehero.jpg);
     background-position: right;
-    font-size: 115%;
-    justify-content: flex-end;
 }
 
-.containerNav{          /*navegador grande del index*/
-    grid-area: productos;
+#longHero{
+    background-image: url("../assets/longg.jpeg");
+    justify-content: center;
+}
+
+#rollersHero{
+    background-image: url("../assets/rollers/rollershero.jpg");
+    justify-content: end;
+    align-items: flex-end;
+}
+
+#surfHero{
+    background-image: url("../assets/surff.jpg");
+    justify-content: end;
+    align-items: flex-end;
+}
+
+.indexNav{          /*navegador grande del index*/
+    height: 700px;
     background-color: black;
     background-image: url("../assets/backgroundProducts.jpg");
     display: grid;
@@ -152,7 +156,6 @@ header{
 }
 
 footer{
-    grid-area: footer;
     display: flex;
     background-color: rgba(245, 165, 209, 0.945) ;
     padding: 15px;
@@ -162,10 +165,10 @@ footer{
 
 
 /*--------------------------- DISPLAY PRODUCTOS -------------------------------*/
-.titulo{               /*Sketchy Jen de index*/
+.titulo{               /*Titulos de hero sections de procutos*/
 
     font-family: 'Aclonica', sans-serif;
-    color: black;
+    color: white;
     font-size: 225%;
     -webkit-text-stroke: 0.5px rgba(245, 165, 209);
     margin-top: 10rem;
@@ -175,7 +178,7 @@ footer{
 .containerProductos{      /*grilla productos exhibidos*/
     margin: 20px;
     display: grid;
-    gap: 20px;
+    gap: 50px;
     grid-template-rows: repeat(4, 1fr);
     overflow: auto;
 }
@@ -183,6 +186,7 @@ footer{
 .cajaItem{          /*caja de UN producto*/
     justify-self: center;
 }
+
 
 /*--------------------------------- RESPONSIVE -------------------------------*/
 
@@ -196,11 +200,7 @@ footer{
 
 @media screen and (max-width: 780px) {
 
-    nav{
-        display: none;
-    }
-
-    .nombreItem{
+    .nombreItem{        /*borro el nombre de las categorias en el indexNav*/
         display: none;
     }
 
@@ -210,22 +210,23 @@ footer{
 
 @media screen and (min-width: 780px){
 
-    body{
-        grid-template-rows: 85px 100vh 2000px 45px;  /*Agrando seccion de productos*/
+    .tituloIndex{               /*Sketchy Jen de index*/
+        font-size: 350%;
     }
 
-    .indexBody{
-        grid-template-rows: 85px 90vh 1250px 45px;
+    .hero{                  /*Agrando Hero*/
+        height: 1700px;
     }
 
-    .titulo{
+    .titulo{                    /*Agrando titulos de hero sections*/
         font-size: 375%;
         margin-top: 10rem;
     }
 
-    .containerNav{      
+    .indexNav{      
         grid-template-columns:repeat(2,1fr);       /*modifico estructura del nav grande del index*/
         padding: 50px;
+        height: 1700px;
         width: 100%;
     }
 
