@@ -104,7 +104,6 @@ header{
 #nosotrosHero{
     background-image: url("../assets/fondonosotros.jpg");
     align-items: center;
-    font-size: 150%;
 }
 
 .indexNav{          /*navegador grande del index*/
@@ -188,6 +187,7 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 10px;
 }
 
 
@@ -264,7 +264,7 @@ footer{
         transform: scale(110%);
     }
 
-    /*----------------SKATE DESKTOP----------*/
+    /*----------------PRODUCTOS DESKTOP----------*/
 
     .containerProductos{
         margin: 50px;                           /*modifico estructura de la grilla de productos exhibidos*/
@@ -282,6 +282,11 @@ footer{
 
     .cajaItem:hover{
         transform: scale(105%);
+    }
+
+    /*----------------NOSOTROS DESKTOP----------*/
+    .carta-custom{
+        font-size: 150%;
     }
 }
 
