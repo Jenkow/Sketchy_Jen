@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SketchyJen Surf</title>
+    <title>SketchyJen</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Koulen&family=Lora:ital,wght@1,700&display=swap" rel="stylesheet">
@@ -34,24 +34,38 @@
                     <a class="nav-link active" href="surf.html">Surf</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" href="nosotros.html">Nosotros</a>
+                    <a class="nav-link active" href="#">Nosotros</a>
                   </li>
                 </ul>
               </div>
             </div>
           </nav>
     </header>
-    <section class="hero" id="surfHero">
-        <h1 class="titulo"><p>Descubrí</p><p>tu tabla</p></h1>
+    <section class="hero" id="nosotrosHero">
+        <div class="container-fluid">
+            <div class="row align-items-end">
+                <div class="col-md-6 carta-custom">
+                    <div class="card" style="max-width: 400px;">
+                        <img src="../assets/sjlogo.jpg" class="card-img-top img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Sketchy Jen</h5>
+                          <p class="card-text">Nunca pares de saltar cercas.</p>
+                        </div>
+                      </div>    
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Decinos lo que vos prefieras y ayudanos a mejorar!</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                      </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <div class="containerProductos">
-        <a class="cajaItem" href=""><img src="../assets/surf/surf01.jpg" alt="" width="250px"></a>
-        <a class="cajaItem" href=""><img src="../assets/surf/surf02.jpg" alt="" width="250px"></a>
-        <a class="cajaItem" href=""><img src="../assets/surf/surf03.jpg" alt="" width="250px"></a>
-        <a class="cajaItem" href=""><img src="../assets/surf/surf04.jpg" alt="" width="250px"></a>
-        <a class="cajaItem" href=""><img src="../assets/surf/surf05.jpg" alt="" width="250px"></a>
-        <a class="cajaItem" href=""><img src="../assets/surf/surf06.jpg" alt="" width="250px"></a>
-    </div>
     <footer>
         <div>
             <a href="https://www.instagram.com/" target="_blank"><img src="../assets/igicon.svg" alt="iglogo" height="20px"></a>
@@ -61,4 +75,3 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
-</html>

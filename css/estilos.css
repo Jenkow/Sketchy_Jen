@@ -6,6 +6,21 @@
     
 }
 
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+
+
 /*--------------------------- . -------------------------------*/
 
 #indexBody{              /*body con background negro para el index*/
@@ -47,7 +62,7 @@ header{
 }
 
 .hero{              /*estructura general de la Hero Section*/
-    height: 800px;
+    height: 100%;
     background-position: center;
     background-size: cover;
     display: flex;
@@ -86,6 +101,12 @@ header{
     align-items: flex-end;
 }
 
+#nosotrosHero{
+    background-image: url("../assets/fondonosotros.jpg");
+    align-items: center;
+    font-size: 150%;
+}
+
 .indexNav{          /*navegador grande del index*/
     height: 700px;
     background-color: black;
@@ -96,14 +117,14 @@ header{
     gap: 20px;
     padding: 20px 10px;
     width: 100%;
-    max-width: 1800px;
     justify-self: center;
 }
 
 .categoriasIndex{       /*cajas de acceso de index*/
-    margin: 5px 0.5rem;
+    margin: 0 auto;
+    width: 100%;
     max-width: 35rem;
-    border-radius: 25px;
+    border-radius: 15px;
     font-family: 'Koulen', cursive;
     font-weight: 400;
     font-size: 175%;
@@ -163,6 +184,12 @@ footer{
     align-items: center;
 }
 
+.carta-custom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 /*--------------------------- DISPLAY PRODUCTOS -------------------------------*/
 .titulo{               /*Titulos de hero sections de procutos*/
@@ -214,12 +241,8 @@ footer{
         font-size: 350%;
     }
 
-    .hero{                  /*Agrando Hero*/
-        height: 1700px;
-    }
-
     .titulo{                    /*Agrando titulos de hero sections*/
-        font-size: 375%;
+        font-size: 400%;
         margin-top: 10rem;
     }
 
