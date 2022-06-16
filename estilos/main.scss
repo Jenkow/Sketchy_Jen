@@ -1,27 +1,5 @@
-/*--------------------------- RESET ----------------------*/
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
-}
-
-html {
-    scroll-behavior: smooth;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-}
-
-body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-}
-
-
-
-/*--------------------------- . -------------------------------*/
+@import "../parcials/variables";
+@import "../parcials/reset";
 
 #indexBody{              /*body con background negro para el index*/
     background-color: black;
@@ -30,38 +8,27 @@ body {
 header{
     display: flex;
     flex-direction: row;
-    background-color:rgba(245, 165, 209, 0.945);
+    background-color:$background-rosa;
     justify-content: space-around;
     align-items: center;
 }
 
-.logo{              /*logo header*/
-    display: flex;
-    width: 65px;
-    height: 65px;
-    border-radius: 50%;
-    background-image: url("../assets/sjlogo.jpg");
-    background-position: center;
-    background-size: contain;
-}
-
-.nav-custom{   /*agrego propiedades al nav de Bootstrap*/
+.nav-custom{
     width: 75%;
     font-family: 'Koulen', cursive;
     font-size: 150%;
-    
+    &__logo{
+        display: flex;
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        background-image: url("../assets/sjlogo.jpg");
+        background-position: center;
+        background-size: contain;
+    }
 }
 
-.tituloIndex{               /*Sketchy Jen de index*/
-
-    font-family: 'Aclonica', sans-serif;
-    color: black;
-    font-size: 200%;
-    -webkit-text-stroke: 0.5px rgba(245, 165, 209);
-    margin-top: 10rem;
-}
-
-.hero{              /*estructura general de la Hero Section*/
+.hero{
     height: 100%;
     background-position: center;
     background-size: cover;
@@ -72,6 +39,13 @@ header{
     color: white;
     -webkit-text-stroke: 1.5px black;
     text-decoration: none;
+    &__titulo{               /*Sketchy Jen de index*/
+        font-family: 'Aclonica', sans-serif;
+        color: black;
+        font-size: 200%;
+        -webkit-text-stroke: 0.5px rgba(245, 165, 209);
+        margin-top: 10rem;
+    }
 }
 
 #indexHero{
@@ -117,25 +91,35 @@ header{
     padding: 20px 10px;
     width: 100%;
     justify-self: center;
+    &__categorias{       /*cajas de acceso de index*/
+        margin: 0 auto;
+        width: 100%;
+        max-width: 35rem;
+        border-radius: 15px;
+        font-family: 'Koulen', cursive;
+        font-weight: 400;
+        font-size: 175%;
+        -webkit-text-stroke: 0.5px black;
+        text-decoration: none;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+    }
+    &__item{    /*ancor en forma de texto*/
+        font-family: 'Koulen', cursive;
+        font-weight: 400;
+        font-size: 250%;
+        color: white;
+        -webkit-text-stroke: 1.5px violet;
+        text-decoration: none;
+        align-self: center;
+        justify-self: center;
+    }
 }
 
-.categoriasIndex{       /*cajas de acceso de index*/
-    margin: 0 auto;
-    width: 100%;
-    max-width: 35rem;
-    border-radius: 15px;
-    font-family: 'Koulen', cursive;
-    font-weight: 400;
-    font-size: 175%;
-    -webkit-text-stroke: 0.5px black;
-    text-decoration: none;
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: center;
-}
 
 #skate{             /*caja skate index*/
     background-image: url("../assets/mobile/skateIndex.jpg");
@@ -164,20 +148,9 @@ header{
     -webkit-text-stroke: 0.5px rgb(255, 172, 244);
 }
 
-.nombreItem{    /*ancor en forma de texto*/
-    font-family: 'Koulen', cursive;
-    font-weight: 400;
-    font-size: 250%;
-    color: white;
-    -webkit-text-stroke: 1.5px violet;
-    text-decoration: none;
-    align-self: center;
-    justify-self: center;
-}
-
 footer{
     display: flex;
-    background-color: rgba(245, 165, 209, 0.945) ;
+    background-color: $background-rosa;
     padding: 15px;
     justify-content: center;
     align-items: center;
@@ -190,17 +163,7 @@ footer{
     padding: 10px;
 }
 
-
 /*--------------------------- DISPLAY PRODUCTOS -------------------------------*/
-.titulo{               /*Titulos de hero sections de procutos*/
-
-    font-family: 'Aclonica', sans-serif;
-    color: white;
-    font-size: 225%;
-    -webkit-text-stroke: 0.5px rgba(245, 165, 209);
-    margin-top: 10rem;
-    transform: translate(0px,-100px);
-}
 
 .containerProductos{      /*grilla productos exhibidos*/
     margin: 20px;
@@ -208,13 +171,10 @@ footer{
     gap: 50px;
     grid-template-rows: repeat(4, 1fr);
     overflow: auto;
+    &__item{          /*caja de UN producto*/
+        justify-self: center;
+    }
 }
-
-.cajaItem{          /*caja de UN producto*/
-    justify-self: center;
-}
-
-
 /*--------------------------------- RESPONSIVE -------------------------------*/
 
 @media screen and (min-width: 426px) {
@@ -227,7 +187,7 @@ footer{
 
 @media screen and (max-width: 780px) {
 
-    .nombreItem{        /*borro el nombre de las categorias en el indexNav*/
+    .indexNav_item{        /*borro el nombre de las categorias en el indexNav*/
         display: none;
     }
 
@@ -237,13 +197,8 @@ footer{
 
 @media screen and (min-width: 780px){
 
-    .tituloIndex{               /*Sketchy Jen de index*/
+    .hero__titulo{               /*Sketchy Jen de index*/
         font-size: 350%;
-    }
-
-    .titulo{                    /*Agrando titulos de hero sections*/
-        font-size: 400%;
-        margin-top: 10rem;
     }
 
     .indexNav{      
@@ -251,18 +206,18 @@ footer{
         padding: 50px;
         height: 1700px;
         width: 100%;
+        &__categorias{       /*cajas de acceso de index*/
+            font-size: 0;
+            background-position: center;
+            background-size: cover;
+            transition: 0.3s;
+        }
+    
+        &__categorias:hover{
+            transform: scale(110%);
+        }
     }
 
-    .categoriasIndex{       /*cajas de acceso de index*/
-        font-size: 0;
-        background-position: center;
-        background-size: cover;
-        transition: 0.3s;
-    }
-
-    .categoriasIndex:hover{
-        transform: scale(110%);
-    }
 
     /*----------------PRODUCTOS DESKTOP----------*/
 
@@ -270,18 +225,16 @@ footer{
         margin: 50px;                           /*modifico estructura de la grilla de productos exhibidos*/
         grid-template-rows: repeat(3, 1fr);
         grid-template-columns: repeat(3,1fr);
+        &__item{          /*caja de UN producto*/
+            transition: 0.3s;
+        }
+        &__item:hover{
+            transform: scale(105%);
+        }
     }
 
     #skateHero{
         justify-content: flex-start;
-    }
-
-    .cajaItem{          /*caja de UN producto*/
-        transition: 0.3s;
-    }
-
-    .cajaItem:hover{
-        transform: scale(105%);
     }
 
     /*----------------NOSOTROS DESKTOP----------*/
@@ -289,5 +242,3 @@ footer{
         font-size: 150%;
     }
 }
-
-
