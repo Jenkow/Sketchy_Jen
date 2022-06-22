@@ -17,6 +17,7 @@ body {
   margin: 0;
 }
 
+/*--------------------------------- RESPONSIVE -------------------------------*/
 #indexBody {
   /*body con background negro para el index*/
   background-color: black;
@@ -45,7 +46,7 @@ header {
   background-size: contain;
 }
 
-.hero {
+.hero, .nosotrosHero, .surfHero, .rollersHero, .longHero, .skateHero, .indexHero {
   height: 100%;
   background-position: center;
   background-size: cover;
@@ -62,40 +63,58 @@ header {
   font-family: "Aclonica", sans-serif;
   color: black;
   font-size: 200%;
-  -webkit-text-stroke: 0.5px rgb(245, 165, 209);
+  -webkit-text-stroke: 0.5px rgb(255, 105, 210);
   margin-top: 10rem;
 }
+@media screen and (min-width: 780px) {
+  .hero__titulo {
+    font-size: 350%;
+  }
+}
 
-#indexHero {
+.indexHero {
+  /*mix para definir background y distribucion del contenido de los heros*/
   background-image: url("../assets/background.jpg");
   justify-content: center;
 }
 
-#skateHero {
-  background-image: url(../assets/skates/skatehero.jpg);
+.skateHero {
+  /*mix para definir background y distribucion del contenido de los heros*/
+  background-image: url("../assets/skates/skatehero.jpg");
+  justify-content: left;
   background-position: right;
 }
+@media screen and (min-width: 780px) {
+  .skateHero {
+    justify-content: flex-start;
+  }
+}
 
-#longHero {
+.longHero {
+  /*mix para definir background y distribucion del contenido de los heros*/
   background-image: url("../assets/longg.jpeg");
   justify-content: center;
 }
 
-#rollersHero {
+.rollersHero {
+  /*mix para definir background y distribucion del contenido de los heros*/
   background-image: url("../assets/rollers/rollershero.jpg");
   justify-content: end;
   align-items: flex-end;
 }
 
-#surfHero {
+.surfHero {
+  /*mix para definir background y distribucion del contenido de los heros*/
   background-image: url("../assets/surff.jpg");
   justify-content: end;
   align-items: flex-end;
 }
 
-#nosotrosHero {
+.nosotrosHero {
+  /*mix para definir background y distribucion del contenido de los heros*/
   background-image: url("../assets/fondonosotros.jpg");
-  align-items: center;
+  justify-content: center;
+  justify-content: center;
 }
 
 .indexNav {
@@ -139,6 +158,29 @@ header {
   text-decoration: none;
   align-self: center;
   justify-self: center;
+  display: none;
+}
+@media screen and (min-width: 780px) {
+  .indexNav {
+    grid-template-columns: repeat(2, 1fr);
+    /*modifico estructura del nav grande del index*/
+    padding: 50px;
+    height: 1700px;
+    width: 100%;
+  }
+  .indexNav__categorias {
+    /*cajas de acceso de index*/
+    font-size: 0;
+    background-position: center;
+    background-size: cover;
+    transition: 0.3s;
+  }
+  .indexNav__categorias:hover {
+    transform: scale(110%);
+  }
+  .indexNav__item {
+    display: flex;
+  }
 }
 
 #skate {
@@ -170,7 +212,7 @@ header {
   /*caja nosotros index*/
   background-image: url("../assets/nosotrosIndex.jpg");
   color: black;
-  -webkit-text-stroke: 0.5px rgb(255, 172, 244);
+  -webkit-text-stroke: 0.5px rgb(255, 105, 210);
 }
 
 footer {
@@ -187,6 +229,11 @@ footer {
   justify-content: center;
   padding: 10px;
 }
+@media screen and (min-width: 780px) {
+  .carta-custom {
+    font-size: 150%;
+  }
+}
 
 /*--------------------------- DISPLAY PRODUCTOS -------------------------------*/
 .containerProductos {
@@ -201,45 +248,12 @@ footer {
   /*caja de UN producto*/
   justify-self: center;
 }
-
-/*--------------------------------- RESPONSIVE -------------------------------*/
 @media screen and (min-width: 426px) {
   .containerProductos {
-    /*grilla productos exhibidos*/
     grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media screen and (max-width: 780px) {
-  .indexNav_item {
-    /*borro el nombre de las categorias en el indexNav*/
-    display: none;
   }
 }
 @media screen and (min-width: 780px) {
-  .hero__titulo {
-    /*Sketchy Jen de index*/
-    font-size: 350%;
-  }
-
-  .indexNav {
-    grid-template-columns: repeat(2, 1fr);
-    /*modifico estructura del nav grande del index*/
-    padding: 50px;
-    height: 1700px;
-    width: 100%;
-  }
-  .indexNav__categorias {
-    /*cajas de acceso de index*/
-    font-size: 0;
-    background-position: center;
-    background-size: cover;
-    transition: 0.3s;
-  }
-  .indexNav__categorias:hover {
-    transform: scale(110%);
-  }
-
-  /*----------------PRODUCTOS DESKTOP----------*/
   .containerProductos {
     margin: 50px;
     /*modifico estructura de la grilla de productos exhibidos*/
@@ -252,14 +266,5 @@ footer {
   }
   .containerProductos__item:hover {
     transform: scale(105%);
-  }
-
-  #skateHero {
-    justify-content: flex-start;
-  }
-
-  /*----------------NOSOTROS DESKTOP----------*/
-  .carta-custom {
-    font-size: 150%;
   }
 }/*# sourceMappingURL=main.css.map */
