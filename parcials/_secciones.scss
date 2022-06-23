@@ -7,7 +7,7 @@
 header{
     display: flex;
     flex-direction: row;
-    background-color:$background-rosa;
+    background-color:map-get($colores,background-rosa);
     justify-content: space-around;
     align-items: center;
 }
@@ -42,7 +42,7 @@ header{
         font-family: 'Aclonica', sans-serif;
         color: black;
         font-size: 200%;
-        -webkit-text-stroke: 0.5px $rosa-fuerte;
+        -webkit-text-stroke: 0.5px map-get($colores,rosa-fuerte);
         margin-top: 10rem;
         @include desktop{
             font-size: 350%;
@@ -159,7 +159,7 @@ header{
 
 #longboard{         /*caja longboard index*/
     background-image: url("../assets/mobile/longboardIndex.jpg");
-    color: $rosa-fuerte;
+    color: map-get($colores,rosa-fuerte);
 }
 
 #rollers{     /*caja rollers index*/
@@ -169,18 +169,18 @@ header{
 
 #surf{        /*caja surf index*/
     background-image: url("../assets/surfIndex.jpg");
-    color: $rosa-fuerte;
+    color: map-get($colores,rosa-fuerte);
 }
 
 #nosotros{      /*caja nosotros index*/
     background-image: url("../assets/nosotrosIndex.jpg");
     color: black;
-    -webkit-text-stroke: 0.5px $rosa-fuerte;
+    -webkit-text-stroke: 0.5px map-get($colores,rosa-fuerte);
 }
 
 footer{
     display: flex;
-    background-color: $background-rosa;
+    background-color: map-get($colores,background-rosa);
     padding: 15px;
     justify-content: center;
     align-items: center;
