@@ -18,20 +18,8 @@ body {
 }
 
 /*--------------------------------- RESPONSIVE -------------------------------*/
-#indexBody {
-  /*body con background negro para el index*/
-  background-color: black;
-}
-
-header {
-  display: flex;
-  flex-direction: row;
-  background-color: rgba(245, 165, 209, 0.945);
-  justify-content: space-around;
-  align-items: center;
-}
-
 .nav-custom {
+  /*modifico nav de bootstrap*/
   width: 75%;
   font-family: "Koulen", cursive;
   font-size: 150%;
@@ -44,6 +32,27 @@ header {
   background-image: url("../assets/sjlogo.jpg");
   background-position: center;
   background-size: contain;
+}
+
+.carta-custom {
+  /*modifico carta de bootstrap*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+@media screen and (min-width: 780px) {
+  .carta-custom {
+    font-size: 150%;
+  }
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(245, 165, 209, 0.945);
+  justify-content: space-around;
+  align-items: center;
 }
 
 .hero, .nosotrosHero, .surfHero, .rollersHero, .longHero, .skateHero, .indexHero {
@@ -76,6 +85,11 @@ header {
   /*mix para definir background y distribucion del contenido de los heros*/
   background-image: url("../assets/background.jpg");
   justify-content: center;
+}
+
+#indexBody {
+  /*body con background negro para el index*/
+  background-color: black;
 }
 
 .skateHero {
@@ -114,6 +128,11 @@ header {
   /*mix para definir background y distribucion del contenido de los heros*/
   background-image: url("../assets/fondonosotros.jpg");
   justify-content: center;
+  justify-content: center;
+}
+
+.container-custom {
+  align-items: center;
   justify-content: center;
 }
 
@@ -215,26 +234,6 @@ header {
   -webkit-text-stroke: 0.5px rgb(255, 105, 210);
 }
 
-footer {
-  display: flex;
-  background-color: rgba(245, 165, 209, 0.945);
-  padding: 15px;
-  justify-content: center;
-  align-items: center;
-}
-
-.carta-custom {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-}
-@media screen and (min-width: 780px) {
-  .carta-custom {
-    font-size: 150%;
-  }
-}
-
 /*--------------------------- DISPLAY PRODUCTOS -------------------------------*/
 .containerProductos {
   /*grilla productos exhibidos*/
@@ -267,4 +266,12 @@ footer {
   .containerProductos__item:hover {
     transform: scale(105%);
   }
+}
+
+footer {
+  display: flex;
+  background-color: rgba(245, 165, 209, 0.945);
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=main.css.map */

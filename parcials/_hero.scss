@@ -1,0 +1,66 @@
+.hero{
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    padding: 40px 40px;
+    font-family: 'Koulen', cursive;
+    font-weight: 400;
+    color: white;
+    -webkit-text-stroke: 1.5px black;
+    text-decoration: none;
+    &__titulo{               /*Sketchy Jen de index*/
+        font-family: 'Aclonica', sans-serif;
+        color: black;
+        font-size: 200%;
+        -webkit-text-stroke: 0.5px map-get($colores,rosa-fuerte);
+        margin-top: 10rem;
+        @include desktop{
+            font-size: 350%;
+        }
+    }
+}
+
+.indexHero{
+    @extend .hero;
+    @include fondos(center, "../assets/background.jpg");
+}
+
+#indexBody{              /*body con background negro para el index*/
+    background-color: black;
+}
+
+.skateHero{
+    @extend .hero;
+    @include fondos(left, "../assets/skates/skatehero.jpg");
+    background-position: right;
+    @include desktop{justify-content: flex-start;}
+}
+
+.longHero{
+    @extend .hero;
+    @include fondos(center, "../assets/longg.jpeg");
+}
+
+.rollersHero{
+    @extend .hero;
+    @include fondos(end, "../assets/rollers/rollershero.jpg");
+    align-items: flex-end;
+}
+
+.surfHero{
+    @extend .hero;
+    @include fondos(end, "../assets/surff.jpg");
+    align-items: flex-end;
+}
+
+.nosotrosHero{
+    @extend .hero;
+    @include fondos(center, "../assets/fondonosotros.jpg");
+    justify-content: center;
+}
+
+.container-custom{
+    align-items: center;
+    justify-content: center;
+}

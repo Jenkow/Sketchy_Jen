@@ -1,3 +1,8 @@
+@mixin fondos($contenido, $imagen) {       /*mix para definir background y distribucion del contenido de los heros*/       
+    background-image: url($imagen);
+    justify-content: $contenido;
+}
+
 /*--------------------------------- RESPONSIVE -------------------------------*/
 
 

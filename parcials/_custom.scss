@@ -1,0 +1,22 @@
+.nav-custom{      /*modifico nav de bootstrap*/
+    width: 75%;
+    font-family: 'Koulen', cursive;
+    font-size: 150%;
+    &__logo{
+        display: flex;
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        background-image: url("../assets/sjlogo.jpg");
+        background-position: center;
+        background-size: contain;
+    }
+}
+
+.carta-custom{    /*modifico carta de bootstrap*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    @include desktop{font-size: 150%;}
+}

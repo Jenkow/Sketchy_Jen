@@ -1,0 +1,7 @@
+header{
+    display: flex;
+    flex-direction: row;
+    background-color:map-get($colores,background-rosa);
+    justify-content: space-around;
+    align-items: center;
+}

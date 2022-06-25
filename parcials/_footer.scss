@@ -1,0 +1,7 @@
+footer{
+    display: flex;
+    background-color: map-get($colores,background-rosa);
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+}
