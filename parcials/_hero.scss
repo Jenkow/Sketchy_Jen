@@ -23,7 +23,7 @@
 
 .indexHero{
     @extend .hero;
-    @include fondos(center, "../assets/background.jpg");
+    @include fondos(center, "../assets/index/background.webp");
 }
 
 #indexBody{              /*body con background negro para el index*/
@@ -32,31 +32,31 @@
 
 .skateHero{
     @extend .hero;
-    @include fondos(left, "../assets/skates/skatehero.jpg");
+    @include fondos(left, "../assets/skates/skatehero.webp");
     background-position: right;
     @include desktop{justify-content: flex-start;}
 }
 
 .longHero{
     @extend .hero;
-    @include fondos(center, "../assets/longg.jpeg");
+    @include fondos(center, "../assets/longs/longhero.webp");
 }
 
 .rollersHero{
     @extend .hero;
-    @include fondos(end, "../assets/rollers/rollershero.jpg");
+    @include fondos(end, "../assets/rollers/rollershero.webp");
     align-items: flex-end;
 }
 
 .surfHero{
     @extend .hero;
-    @include fondos(end, "../assets/surff.jpg");
+    @include fondos(end, "../assets/surf/surfhero.webp");
     align-items: flex-end;
 }
 
 .nosotrosHero{
     @extend .hero;
-    @include fondos(center, "../assets/fondonosotros.jpg");
+    @include fondos(center, "../assets/fondonosotros.webp");
     justify-content: center;
 }
 

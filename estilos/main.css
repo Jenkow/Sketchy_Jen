@@ -18,8 +18,7 @@ body {
 }
 
 /*--------------------------------- RESPONSIVE -------------------------------*/
-.nav-custom {
-  /*modifico nav de bootstrap*/
+.nav-custom { /*modifico nav de bootstrap*/
   width: 75%;
   font-family: "Koulen", cursive;
   font-size: 150%;
@@ -34,8 +33,7 @@ body {
   background-size: contain;
 }
 
-.carta-custom {
-  /*modifico carta de bootstrap*/
+.carta-custom { /*modifico carta de bootstrap*/
   display: flex;
   align-items: center;
   justify-content: center;
@@ -67,8 +65,7 @@ header {
   -webkit-text-stroke: 1.5px black;
   text-decoration: none;
 }
-.hero__titulo {
-  /*Sketchy Jen de index*/
+.hero__titulo { /*Sketchy Jen de index*/
   font-family: "Aclonica", sans-serif;
   color: black;
   font-size: 200%;
@@ -83,18 +80,17 @@ header {
 
 .indexHero {
   /*mix para definir background y distribucion del contenido de los heros*/
-  background-image: url("../assets/background.jpg");
+  background-image: url("../assets/index/background.webp");
   justify-content: center;
 }
 
-#indexBody {
-  /*body con background negro para el index*/
+#indexBody { /*body con background negro para el index*/
   background-color: black;
 }
 
 .skateHero {
   /*mix para definir background y distribucion del contenido de los heros*/
-  background-image: url("../assets/skates/skatehero.jpg");
+  background-image: url("../assets/skates/skatehero.webp");
   justify-content: left;
   background-position: right;
 }
@@ -106,27 +102,27 @@ header {
 
 .longHero {
   /*mix para definir background y distribucion del contenido de los heros*/
-  background-image: url("../assets/longg.jpeg");
+  background-image: url("../assets/longs/longhero.webp");
   justify-content: center;
 }
 
 .rollersHero {
   /*mix para definir background y distribucion del contenido de los heros*/
-  background-image: url("../assets/rollers/rollershero.jpg");
+  background-image: url("../assets/rollers/rollershero.webp");
   justify-content: end;
   align-items: flex-end;
 }
 
 .surfHero {
   /*mix para definir background y distribucion del contenido de los heros*/
-  background-image: url("../assets/surff.jpg");
+  background-image: url("../assets/surf/surfhero.webp");
   justify-content: end;
   align-items: flex-end;
 }
 
 .nosotrosHero {
   /*mix para definir background y distribucion del contenido de los heros*/
-  background-image: url("../assets/fondonosotros.jpg");
+  background-image: url("../assets/fondonosotros.webp");
   justify-content: center;
   justify-content: center;
 }
@@ -136,11 +132,10 @@ header {
   justify-content: center;
 }
 
-.indexNav {
-  /*navegador grande del index*/
+.indexNav { /*navegador grande del index*/
   height: 700px;
   background-color: black;
-  background-image: url("../assets/backgroundProducts.jpg");
+  background-image: url("../assets/index/backgroundNavIndex.webp");
   display: grid;
   grid-template-rows: repeat(5, 1fr);
   grid-template-areas: "skate" "longboard" "rollers" "surf" "nosotros";
@@ -149,8 +144,7 @@ header {
   width: 100%;
   justify-self: center;
 }
-.indexNav__categorias {
-  /*cajas de acceso de index*/
+.indexNav__categorias { /*cajas de acceso de index*/
   margin: 0 auto;
   width: 100%;
   max-width: 35rem;
@@ -167,8 +161,7 @@ header {
   justify-content: end;
   align-items: center;
 }
-.indexNav__item {
-  /*ancor en forma de texto*/
+.indexNav__item { /*ancor en forma de texto*/
   font-family: "Koulen", cursive;
   font-weight: 400;
   font-size: 250%;
@@ -181,14 +174,12 @@ header {
 }
 @media screen and (min-width: 780px) {
   .indexNav {
-    grid-template-columns: repeat(2, 1fr);
-    /*modifico estructura del nav grande del index*/
+    grid-template-columns: repeat(2, 1fr); /*modifico estructura del nav grande del index*/
     padding: 50px;
     height: 1700px;
     width: 100%;
   }
-  .indexNav__categorias {
-    /*cajas de acceso de index*/
+  .indexNav__categorias { /*cajas de acceso de index*/
     font-size: 0;
     background-position: center;
     background-size: cover;
@@ -202,49 +193,42 @@ header {
   }
 }
 
-#skate {
-  /*caja skate index*/
-  background-image: url("../assets/mobile/skateIndex.jpg");
+#skate { /*caja skate index*/
+  background-image: url("../assets/index/skateIndex.webp");
   color: white;
   -webkit-text-stroke: 1px black;
 }
 
-#longboard {
-  /*caja longboard index*/
-  background-image: url("../assets/mobile/longboardIndex.jpg");
+#longboard { /*caja longboard index*/
+  background-image: url("../assets/index/longboardIndex.webp");
   color: rgb(255, 105, 210);
 }
 
-#rollers {
-  /*caja rollers index*/
-  background-image: url("../assets/mobile/rollerIndex.jpg");
+#rollers { /*caja rollers index*/
+  background-image: url("../assets/index/rollerIndex.webp");
   color: white;
 }
 
-#surf {
-  /*caja surf index*/
-  background-image: url("../assets/surfIndex.jpg");
+#surf { /*caja surf index*/
+  background-image: url("../assets/index/surfIndex.webp");
   color: rgb(255, 105, 210);
 }
 
-#nosotros {
-  /*caja nosotros index*/
-  background-image: url("../assets/nosotrosIndex.jpg");
+#nosotros { /*caja nosotros index*/
+  background-image: url("../assets/index/nosotrosIndex.webp");
   color: black;
   -webkit-text-stroke: 0.5px rgb(255, 105, 210);
 }
 
 /*--------------------------- DISPLAY PRODUCTOS -------------------------------*/
-.containerProductos {
-  /*grilla productos exhibidos*/
+.containerProductos { /*grilla productos exhibidos*/
   margin: 20px;
   display: grid;
   gap: 50px;
   grid-template-rows: repeat(4, 1fr);
   overflow: auto;
 }
-.containerProductos__item {
-  /*caja de UN producto*/
+.containerProductos__item { /*caja de UN producto*/
   justify-self: center;
 }
 @media screen and (min-width: 426px) {
@@ -254,13 +238,11 @@ header {
 }
 @media screen and (min-width: 780px) {
   .containerProductos {
-    margin: 50px;
-    /*modifico estructura de la grilla de productos exhibidos*/
+    margin: 50px; /*modifico estructura de la grilla de productos exhibidos*/
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(3, 1fr);
   }
-  .containerProductos__item {
-    /*caja de UN producto*/
+  .containerProductos__item { /*caja de UN producto*/
     transition: 0.3s;
   }
   .containerProductos__item:hover {

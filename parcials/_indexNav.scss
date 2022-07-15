@@ -1,7 +1,7 @@
 .indexNav{          /*navegador grande del index*/
     height: 700px;
     background-color: black;
-    background-image: url("../assets/backgroundProducts.jpg");
+    background-image: url("../assets/index/backgroundNavIndex.webp");
     display: grid;
     grid-template-rows: repeat(5, 1fr);
     grid-template-areas: "skate" "longboard" "rollers" "surf" "nosotros";
@@ -60,28 +60,28 @@
 
 
 #skate{             /*caja skate index*/
-    background-image: url("../assets/mobile/skateIndex.jpg");
+    background-image: url("../assets/index/skateIndex.webp");
     color: white;
     -webkit-text-stroke: 1px black;
 }
 
 #longboard{         /*caja longboard index*/
-    background-image: url("../assets/mobile/longboardIndex.jpg");
+    background-image: url("../assets/index/longboardIndex.webp");
     color: map-get($colores,rosa-fuerte);
 }
 
 #rollers{     /*caja rollers index*/
-    background-image: url("../assets/mobile/rollerIndex.jpg");
+    background-image: url("../assets/index/rollerIndex.webp");
     color: white;
 }
 
 #surf{        /*caja surf index*/
-    background-image: url("../assets/surfIndex.jpg");
+    background-image: url("../assets/index/surfIndex.webp");
     color: map-get($colores,rosa-fuerte);
 }
 
 #nosotros{      /*caja nosotros index*/
-    background-image: url("../assets/nosotrosIndex.jpg");
+    background-image: url("../assets/index/nosotrosIndex.webp");
     color: black;
     -webkit-text-stroke: 0.5px map-get($colores,rosa-fuerte);
 }
